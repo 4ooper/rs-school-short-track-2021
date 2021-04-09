@@ -17,16 +17,18 @@
 function getMatrixElementsSum(matrix) {
   const m = matrix.length;
   const n = matrix[0].length;
-    let sum = 0;
+  let sum;
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       if (i !== 0) {
-        if (matrix[i - 1][j] !== 0) { sum += matrix[i][j]; }
+        if (matrix[i - 1][j] !== 0) {
+          sum += matrix[i][j];
+        }
       } else {
         sum += matrix[i][j];
       }
     }
   }
+  return (sum);
 }
-
 module.exports = getMatrixElementsSum;
